@@ -47,7 +47,7 @@
         if (mysqli_num_rows($result) > 0){
             $row = mysqli_fetch_array($result);
             $id = $row['id'];
-            $query = "UPDATE bap_wall_members SET status=1 WHERE id=$id";
+            $query = "UPDATE nee SET status=1 WHERE id=$id";
             $result = mysqli_query($dbc, $query) or die ('Error updating');
             echo '<br>Bedankt, je inschrijving is compleet!';
         }else{
