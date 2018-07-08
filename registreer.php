@@ -62,7 +62,7 @@ $hashcode = hash('sha512', $random_number);
 
 
 
-$query = "INSERT INTO bap_wall_members
+$query = "INSERT INTO hier
               VALUES (0, NOW(), '$username', '$passhash', '$email', '$hashcode', 0)";
 $result = mysqli_query($dbc, $query) or die('Error querying database.');
 
@@ -72,7 +72,7 @@ $subject = 'Verifieren account Oh Snap!';
 $message = 'Hallo ' . $username . '! <br>' .
             ' En welkom op Oh Snap! Ter verificatie willen we u vragen ' .
             'om op de volgende link te klikken: ' .
-            'http://www.23519.hosts.ma-cloud.nl/bewijzenmap/p1.3/bap/verify.php?email=' . $email . '&hashcode=' . $hashcode;
+            'http://www.23519.hosts.ma-cloud.nl/bewijzenmap/p1.3/verify.php?email=' . $email . '&hashcode=' . $hashcode;
 
 
 $from =  'Team Oh Snap!';
