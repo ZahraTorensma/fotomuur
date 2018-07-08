@@ -72,7 +72,7 @@
     if(isset($_POST['submit_upload'])){
         $dbc = mysqli_connect(HOST, USERNAME, PASSWORD, DBNAME) or die ('Error in db komen..');
         $description = mysqli_real_escape_string($dbc, trim($_POST['description']));
-        $temp = $_FILES['image']['tmp_name'];
+        $temp = $_FILES['image']['tmp'];
         $target = 'images/' . time() . $_FILES['image']['name'];
 
 
@@ -80,7 +80,7 @@
             if(move_uploaded_file($temp, $target)){
                 echo '<br>Gelukt!<br>';
 
-                $query = "INSERT INTO bap_wall_images VALUES (0, NOW(), '$description', '$target', 'zahra')";
+                $query = "INSERT INTO hier VALUES (0, NOW(), '$description', '$target', 'hmhm')";
                 $result = mysqli_query($dbc, $query) or die ('Error querying');
             } else{
                 echo '<br>Mislukt!<br>';
@@ -94,7 +94,7 @@
 //dit is om alle afbeeldingen op de uploadpagina te laten zien.
 
 //    $dbc = mysqli_connect(HOST, USERNAME, PASSWORD, DBNAME) or die ('Error 2');
-//    $query = "SELECT * FROM bap_wall_images ORDER BY id DESC";
+//    $query = "SELECT * FROM nope ORDER BY id DESC";
 //    $result = mysqli_query($dbc, $query) or die ('Error querying 2');
 //
 //    while ( $row = mysqli_fetch_array($result)){
