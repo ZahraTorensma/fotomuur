@@ -49,7 +49,7 @@ $dbc = mysqli_connect(HOST, USERNAME, PASSWORD, DBNAME) or die('Error connecting
 if ($email=='email' && $passhash=='password'){
 
 
-    $query = "SELECT * FROM bap_wall_members WHERE email='$email' and password='$passhash'";
+    $query = "SELECT * FROM hier WHERE email='$email' and password='$passhash'";
     $result = mysqli_query($dbc, $query) or die('Error querying database.');
     echo 'yo zogenaamd ingelogd';
 
@@ -57,7 +57,7 @@ if ($email=='email' && $passhash=='password'){
     echo 'het wachtwoord is niet goed';
     }
 
-//$query="SELECT * FROM bap_wall_members WHERE email='$email' and password='$passhash'";
+//$query="SELECT * FROM .. WHERE email='$email' and password='$passhash'";
 //$result=mysqli_query($dbc, $query) or die('Error querying database.');
 //
 //$count=mysqli_num_rows($result);
