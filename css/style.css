@@ -1,0 +1,256 @@
+html, body {
+    margin:0;
+    padding:0;
+}
+
+html{
+    font-family: 'Old Standard TT', serif;
+}
+
+#header{
+    width: 100%;
+    height: 50px;
+    background-color: aquamarine;
+    position: fixed;
+}
+#header>a>img{
+    height: 100%;
+    margin-left: 44%;
+}
+.menuknop{
+    font-size: 25px;
+    position: fixed;
+}
+
+.menuknop:hover{
+    font-weight: bolder;
+}
+/* The side navigation menu */
+.menu {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.menu a:hover, .offcanvas a:focus{
+    color: aquamarine;
+}
+
+/* Position and style the close button (top right corner) */
+.menu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+#submithome{
+    width: 7rem;
+}
+
+#keuzes{
+    width: 100%;
+    padding-bottom: 20px;
+}
+#keuzes>#eersteform{
+    width:45%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    float: right;
+}
+#keuzes>#tweedeform{
+    width:43%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+#submithome{
+    background-color: transparent;
+    border: double aquamarine;
+    padding: 1.5px;
+}
+#submithome:hover{
+    color: black;
+    border-color: aquamarine;
+    border-style: solid;
+    background-color: transparent;
+}
+
+#blokken{
+    overflow: auto;
+    clear: both;
+    width: 70%;
+    height: 100%;
+    background-color: honeydew;
+    margin: 0 auto;
+    padding: 3%;
+}
+
+#foto>img{
+    margin: auto;
+    width: 50%;
+    height: auto;
+    max-width: 300px;
+}
+
+#login{
+    border-left: solid;
+    border-color: aquamarine;
+    border-width: thick;
+    float: left;
+    margin-bottom: 40px;
+}
+
+#register{
+    border-left: solid;
+    border-color: aquamarine;
+    border-width: thick;
+    float: right;
+}
+
+#wachtwoorden{
+    margin-top: 300px;
+    float: right;
+    border-style: ridge;
+    border-color: red;
+}
+
+#upload{
+    border-left: solid;
+    border-color: aquamarine;
+    border-width: thick;
+    float: left;
+    margin-left: 23%;
+}
+
+
+
+/*Modale dingen*/
+
+/* Style the Image Used to Trigger the Modal */
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #4d4d4d;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: aquamarine;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .menu {padding-top: 15px;}
+    .menu a {font-size: 18px;}
+}
+
+@media (max-width: 700px) {
+
+
+    #register{
+        float: left;
+    }
+}
