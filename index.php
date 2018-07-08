@@ -104,14 +104,14 @@
         }
 
 
-        $query = "SELECT * FROM bap_wall_images WHERE description LIKE '$searchterm' ORDER BY $column $order";
+        $query = "SELECT * FROM hier WHERE bijDeBeschrijving LIKE '$searchterm' ORDER BY $column $order";
         $result = mysqli_query($dbc, $query) or die ('Error querying 2');
 
         while ( $row = mysqli_fetch_array($result)){
             $target = $row['target'];
             $date = $row['date'];
-            $username = $row['username'];
-            $description = $row['description'];
+            $usern = $row['usern'];
+            $descr = $row['descr'];
 
             echo '<span id="foto"><img id="myImg" src="' . $target . '"/></span><br>';
             echo'<div id="myModal" class="modal">';
@@ -119,10 +119,10 @@
 
 
             echo ' <div id="blokken">';
-            echo '<span id="gebruiker">' . $username . '</span><br><br>';
+            echo '<span id="gebruiker">' . $usern . '</span><br><br>';
             echo '<span id="foto"><img id="img01" class="modal-content" src="' . $target . '"/></span><br>';
-            echo $date . '*' . $username . '*' . $description . '<br>';
-            echo '<span id="caption">' . $description . '</span>';
+            echo $date . '*' . $usern . '*' . $descr . '<br>';
+            echo '<span id="caption">' . $descr . '</span>';
             echo '</div></div><br><br>';
         }
 
