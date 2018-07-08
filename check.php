@@ -2,7 +2,7 @@
 
 session_start();
 
-$conn = new mysqli('localhost', '23519_bap_wall', '23519', '23519_bap_wall');
+$conn = *maakt connectie*
 
 $user_check = $_SESSION['user'];
 $sql = mysqli_query($conn, "SELECT user FROM users WHERE user = '$user_check'");
